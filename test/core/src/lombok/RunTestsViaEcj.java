@@ -177,6 +177,7 @@ public class RunTestsViaEcj extends AbstractRunTests {
 				String output = cud.toString();
 				// starting somewhere around ecj16, the print code is a bit too cavalier with printing modifiers.
 				output = output.replace("non-sealed @val", "@val");
+				output = output.replace("final non-sealed ", "final ");
 				result.setOutput(output);
 			}
 			

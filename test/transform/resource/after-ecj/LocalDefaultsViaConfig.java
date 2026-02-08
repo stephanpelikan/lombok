@@ -8,7 +8,7 @@ class LocalDefaultsViaConfig {
     param = "changed";
   }
   void enhancedForLoop() {
-    for (final non-sealed String item : java.util.Arrays.asList("a", "b"))
+    for (final String item : java.util.Arrays.asList("a", "b"))
       {
         final String inner = item;
       }
