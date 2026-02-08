@@ -624,7 +624,25 @@ public class ConfigurationKeys {
 	 * If set, <em>any</em> usage of {@code @FieldDefaults} results in a warning / error.
 	 */
 	public static final ConfigurationKey<FlagUsageType> FIELD_DEFAULTS_FLAG_USAGE = new ConfigurationKey<FlagUsageType>("lombok.fieldDefaults.flagUsage", "Emit a warning or error if @FieldDefaults is used.") {};
-	
+
+	// ----- LocalDefaults -----
+
+	/**
+	 * lombok configuration: {@code lombok.localDefaults.defaultFinal} = {@code true} | {@code false}.
+	 *
+	 * If set to {@code true} <em>any</em> local variable without {@code @NonFinal} is marked as {@code final} by lombok, in all source files compiled.
+	 */
+	public static final ConfigurationKey<Boolean> LOCAL_DEFAULTS_FINAL_EVERYWHERE = new ConfigurationKey<Boolean>("lombok.localDefaults.defaultFinal", "If true, local variables, in any file (lombok annotated or not) are marked as final. Use @NonFinal to override this.") {};
+
+	// ----- ParameterDefaults -----
+
+	/**
+	 * lombok configuration: {@code lombok.parameterDefaults.defaultFinal} = {@code true} | {@code false}.
+	 *
+	 * If set to {@code true} <em>any</em> method, constructor, or catch parameter without {@code @NonFinal} is marked as {@code final} by lombok, in all source files compiled.
+	 */
+	public static final ConfigurationKey<Boolean> PARAMETER_DEFAULTS_FINAL_EVERYWHERE = new ConfigurationKey<Boolean>("lombok.parameterDefaults.defaultFinal", "If true, method/constructor/catch parameters, in any file (lombok annotated or not) are marked as final. Use @NonFinal to override this.") {};
+
 	// ----- Helper -----
 	
 	/**
